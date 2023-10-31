@@ -1,0 +1,20 @@
+package br.com.erudio.exceptions.handler;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import br.com.erudio.exceptions.ExceptionResponse;
+
+@ControllerAdvice  //usamos quando precisamos contrar algum tratamento espelhado em todos os controllers
+@RestController
+public class CustomizeResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+	
+	public final ResponseEntity<ExceptionResponse> handleAllExceptions(Exception ex, WebRequest) {
+		
+	}
+	
+
+}
